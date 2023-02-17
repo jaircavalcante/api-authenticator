@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost/project
+    password: root
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: 'false'
+      ddl-auto: create
+  flyway:
+    locations: db/migration,db/migration/*
+
+springdoc:
+  api-docs:
+    path: /docs
+
+server:
+  servlet:
+    context-path: /api
+  port: '8080'
+
+jwt:
+  secret: eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY3NjY1OTQ2NSwiaWF0IjoxNjc2NjU5NDY1fQ.iAwQ6oFp5jUo7m4MsBTr9ssJlu4bMBlUTA1C9IcNfys
+  expiration: 86400000
+
